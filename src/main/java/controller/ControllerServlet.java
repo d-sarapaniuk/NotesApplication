@@ -21,7 +21,6 @@ public class ControllerServlet extends HttpServlet {
             req.getRequestDispatcher("/addNote.jsp").forward(req, resp);
         }
         else {
-            req.setAttribute("noteList", noteRepository.getNoteList());
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
         }
     }
@@ -34,6 +33,7 @@ public class ControllerServlet extends HttpServlet {
         Note newNote = new Note(id, title, content);
 
         noteRepository.addNote(newNote);
+
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 }

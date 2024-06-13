@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="model.Note" %>
+<%@ page import="model.Note, model.NoteRepository" %>
 <%@ page import="java.util.ArrayList" %>
 <html>
 <head>
@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<% ArrayList<Note> noteList = (ArrayList<Note>) request.getAttribute("noteList");
+<% ArrayList<Note> noteList = NoteRepository.getInstance().getNoteList();
     if (noteList != null) {
 %>
 <table>

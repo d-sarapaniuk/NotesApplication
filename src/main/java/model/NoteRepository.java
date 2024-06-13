@@ -5,7 +5,7 @@ import java.util.List;
 
 public class NoteRepository {
     private static NoteRepository instance;
-    private List<Note> noteList = new ArrayList<Note>();
+    private ArrayList<Note> noteList = new ArrayList<Note>();
 
     private NoteRepository(){};
     public static NoteRepository getInstance(){
@@ -19,7 +19,7 @@ public class NoteRepository {
         noteList.add(note);
     }
 
-    public List<Note> getNoteList() {
+    public ArrayList<Note> getNoteList() {
         return noteList;
     }
 
