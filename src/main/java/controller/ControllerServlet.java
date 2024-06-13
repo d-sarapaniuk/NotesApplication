@@ -17,7 +17,7 @@ public class ControllerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = req.getServletPath();
-        if (path.equals("/note/add")){
+        if (path.equals("/notes/add")){
             req.getRequestDispatcher("/addNote.jsp").forward(req, resp);
         }
         else {
