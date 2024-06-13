@@ -6,7 +6,7 @@
 <body>
 
 <h2>Add Note</h2>
-<form action="notes" method="post">
+<form action="/notes" method="post">
     <label for="id">ID:</label>
     <input type="text" id="id" name="id"><br><br>
     <label for="title">Title:</label>

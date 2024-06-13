@@ -34,6 +34,6 @@ public class ControllerServlet extends HttpServlet {
         Note newNote = new Note(id, title, content);
 
         noteRepository.addNote(newNote);
-        resp.sendRedirect("index");
+        req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
 }
